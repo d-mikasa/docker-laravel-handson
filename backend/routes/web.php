@@ -12,3 +12,5 @@
 */
 
 Route::get('hello', 'HogeController@index');
+
+Route::post('hello', 'HogeController@post');

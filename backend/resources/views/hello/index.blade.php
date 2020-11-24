@@ -2,14 +2,15 @@
 <head>
     <title>Hello/Index</title>
     <style>
-        body{
+        body {
             font-size: 16pt;
-            color:#999;
+            color: #999;
         }
-        h1{
+
+        h1 {
             font-size: 50pt;
             text-align: right;
-            color:#f6f6f6;
+            color: #f6f6f6;
             margin: -20px 0px -30px 0px;
             letter-spacing: -4pt;
         }
@@ -18,5 +19,10 @@
 <body>
     <h1>Blade/Index</h1>
     <p>{{$msg}}</p>
+    <form action="/hello" method="POST">
+        @csrf
+        <input type="text" name="msg">
+        <input type="submit" value="送信">
+    </form>
 </body>
 </html>
