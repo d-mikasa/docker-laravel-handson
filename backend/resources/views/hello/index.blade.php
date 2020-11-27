@@ -10,8 +10,8 @@
 @section('content')
     <p>ここが本文のコンテンツです</p>
     <p>必要なだけ記述できます</p>
-@endsection
 
-@section('footer')
-    copyright 2020 tuyano.
+@include('components.message', ['msg_title'=>'ok',
+    'msg_content'=>'サブビューです。'])
+
 @endsection
