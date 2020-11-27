@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>MIKA.GG</h1>
-
+    <li><a href="{{ action('IndexController@link') }}">aaaa</a></li>
     <main class="loginForm">
         <form action="" method="post">
             @csrf

@@ -14,6 +14,15 @@ class IndexController extends Controller
 
     public function login()
     {
-        return view('admin.top');
+        if (Input::get('foo')) {
+            $this->foo();
+        } elseif (Input::get('bar')) {
+            $this->bar();
+        }
+    }
+
+    public function link()
+    {
+        return view('welcome');
     }
 }
