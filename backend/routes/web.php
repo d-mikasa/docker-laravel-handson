@@ -11,13 +11,7 @@
 |
 */
 
-// Route::get('hello', 'HogeController@index');
+Route::get('hello', 'HogeController@index');
 
-// Route::post('hello', 'HogeController@post');
+Route::post('hello', 'HogeController@post');
 
-Route::get('index', 'IndexController@index');
-Route::post('index', 'IndexController@login');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
