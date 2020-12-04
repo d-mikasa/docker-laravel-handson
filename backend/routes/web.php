@@ -1,5 +1,5 @@
 <?php
-
+ use App\Http\Middleware\HelloMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,8 +10,5 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('hello', 'HogeController@index');
-
 Route::post('hello', 'HogeController@post');
-

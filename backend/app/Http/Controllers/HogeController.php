@@ -7,22 +7,19 @@ use Illuminate\Http\Response;
 
 class HogeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data = [
-            ['name'=>'山田太郎' , 'mail'=>'taro@yamada'],
-            ['name'=>'田中花子' , 'mail'=>'ttanaka@hanako'],
-            ['name'=>'杉田智和' , 'mail'=>'ikisugita@tomokazu']
-        ];
-        return view('hello.index', ['data' =>$data]);
+        return view('hello.index', ['msg'=>'フォームを入力:']);
     }
 
     public function post(Request $request)
     {
-        $msg = $request->msg;
-        $data = [
-            'msg'=>'こんにちは' . $msg . 'さん！',
-        ];
-        return view('hello.index',$data);
+            $validate_rule = [
+                'name' =>'required',
+                'mail' =>'email',
+                'age' =>'numeric|between:0,150',
+            ];
+            $this->validate($request, $validate_rule);
+            return view('hello.index', ['msg'=>'正しく入力されました!!']);
     }
 }
