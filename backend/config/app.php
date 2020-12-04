@@ -175,6 +175,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //教本で入れろと言われたサービスプロバイダ
+        App\Providers\HelloServiceProvider::class
     ],
 
     /*
