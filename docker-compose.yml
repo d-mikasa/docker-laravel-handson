@@ -21,5 +21,17 @@ services:
     volumes:
       - db-store:/var/lib/mysql
 
+
+  phpmyadmin:
+    container_name: test_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOSTS=db
+      - PMA_USER=phper
+      - PMA_PASSWORD=secret
+    ports:
+      - 8080:80
+
 volumes:
   db-store:
