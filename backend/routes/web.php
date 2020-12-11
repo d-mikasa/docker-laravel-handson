@@ -12,3 +12,13 @@
 */
 Route::get('hello', 'HogeController@index');
 Route::post('hello', 'HogeController@post');
+
+Route::get('hello/add', 'HogeController@add');
+Route::post('hello/add', 'HogeController@create');
+
+Route::get('hello/edit', 'HogeController@edit');
+Route::post('hello/edit', 'HogeController@update');
+
+Route::get('hello/del', 'HogeController@del');
+Route::post('hello/del', 'HogeController@remove');
+
