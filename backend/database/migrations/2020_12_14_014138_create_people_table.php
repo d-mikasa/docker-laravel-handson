@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHogeTable extends Migration
+class CreatePeopleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,9 +15,9 @@ class CreateHogeTable extends Migration
     {
         Schema::create('hoge', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps('create_date');
-            $table->bigIncrements('delete_flg');
-            $table->bigIncrements('its_valiavre');
+            $table->string('name');
+            $table->string('mail');
+            $table->string('age');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateHogeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hoge');
+        Schema::dropIfExists('people');
     }
 }

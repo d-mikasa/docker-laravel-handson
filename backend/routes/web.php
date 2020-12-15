@@ -22,3 +22,4 @@ Route::post('hello/edit', 'HogeController@update');
 Route::get('hello/del', 'HogeController@del');
 Route::post('hello/del', 'HogeController@remove');
 
+Route::get('person', 'PersonController@index');
